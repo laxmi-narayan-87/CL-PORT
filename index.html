@@ -64,8 +64,6 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--persimmon);outline
 .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem}
 .project{min-width:0;display:flex;flex-direction:column;background:var(--paper-light);border:1px solid var(--line);padding:1rem;min-height:440px}
 .project:nth-child(even){margin-top:2.2rem}
-.project-visual{height:190px;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1.2rem;background:var(--paper-deep)}
-.project-visual svg{width:100%;height:100%;display:block}
 .project-top{display:flex;justify-content:space-between;align-items:start;gap:.8rem}
 .project h3{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:.5rem 0}
 .project p{color:var(--muted);margin:.25rem 0 1rem;max-width:54ch}
@@ -108,12 +106,12 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
  .hero{grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr);gap:2.5rem}
  .hero h1{font-size:clamp(4rem,9vw,6.5rem)}
  .section-head{grid-template-columns:130px 1fr;gap:1.4rem}
- .project-visual{height:165px}
+ .project-map{min-height:140px}
  .project{min-height:460px}
  .project:nth-child(even){margin-top:1.5rem}
 }
 @media(max-width:680px){
- html{scroll-padding-top:1rem}
+ html{scroll-padding-top:9rem}
  .wrap{width:calc(100% - 2rem)}
  .nav{align-items:flex-start;flex-direction:column;gap:.2rem;padding:.65rem 0}
  .navlinks{width:100%;gap:.1rem .85rem}
@@ -127,7 +125,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
  .about-grid,.cards,.build-grid,.skills,.evidence,.personal{grid-template-columns:1fr;gap:1.2rem}
  .project{min-height:0;padding:.85rem}
  .project:nth-child(even){margin-top:0}
- .project-visual{height:180px}
+ .project-map{min-height:120px}
  .skill-row{grid-template-columns:105px 1fr;gap:.8rem}
  .contact{width:calc(100% - 2rem);padding:2.2rem 1.3rem}
  .contact h2{font-size:clamp(3.2rem,13vw,5rem)}
