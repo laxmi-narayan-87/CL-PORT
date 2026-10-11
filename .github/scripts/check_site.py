@@ -43,6 +43,8 @@ checks = {
     "main landmark": '<main id="main">' in html,
     "all in-page links have targets": all(fragment in parser.ids for fragment in parser.fragments),
     "inline project, achievement, and footer links have 44px tap targets": ".project .proof a,.about-grid a,footer a{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 0}" in html,
+    "all four project cards have custom inline illustrations": all(marker in html for marker in ('class="project-art art-dark"', 'class="project-art art-skill"', 'class="project-art art-agro"', 'class="project-art art-frozen"')),
+    "project illustrations are decorative to assistive technology": html.count('aria-hidden="true"><svg viewBox="0 0 520 150" role="presentation">') == 4,
     "new-tab links use safe rel values": not parser.unsafe_new_tab_links,
     "skills are reachable from navigation": 'href="#skills">Skills</a>' in html,
     "no draft instructions remain": not any(phrase in html.lower() for phrase in ("add a verified demo", "evidence to publish", "use this section for")),
