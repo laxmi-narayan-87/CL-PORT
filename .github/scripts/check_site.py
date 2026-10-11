@@ -30,6 +30,14 @@ class SiteParser(HTMLParser):
 
 parser = SiteParser()
 parser.feed(html)
+project_cards = re.findall(r'<article class="project">(.*?)</article>', html, re.DOTALL)
+expected_project_maps = (
+    ("DarkSense AI", "darksense"),
+    ("SkillForge Academy", "skillforge"),
+    ("AgroValue", "agrovalue"),
+    ("FrozenLake Q-learning", "frozenlake"),
+)
+
 checks = {
     "HTML5 doctype": html.lstrip().lower().startswith("<!doctype html>"),
     "language attribute": '<html lang="en">' in html,
@@ -47,6 +55,16 @@ checks = {
     "no draft instructions remain": not any(phrase in html.lower() for phrase in ("add a verified demo", "evidence to publish", "use this section for")),
     "skip link": 'class="skip" href="#main"' in html,
     "reduced-motion support": "prefers-reduced-motion:reduce" in html,
+
+    "project workflow mapping is explicit": all(
+        any(
+            f"<h3>{title}</h3>" in card and f'data-project-map="{key}"' in card
+            for card in project_cards
+        )
+        for title, key in expected_project_maps
+    ),
+    "four distinct project workflows": len(re.findall(r'data-project-map="(?:darksense|skillforge|agrovalue|frozenlake)"', html)) == 4,
+    "no external image dependencies": not re.search(r'<img\b|url\(https?://', html, re.IGNORECASE),
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
 }
