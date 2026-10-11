@@ -47,6 +47,27 @@ checks = {
     "no draft instructions remain": not any(phrase in html.lower() for phrase in ("add a verified demo", "evidence to publish", "use this section for")),
     "skip link": 'class="skip" href="#main"' in html,
     "reduced-motion support": "prefers-reduced-motion:reduce" in html,
+
+    "project visual mapping is explicit": all(
+        re.search(
+            rf'<article class="project">.*?<div class="project-visual" data-project-visual="{key}"',
+            html,
+            re.DOTALL,
+        )
+        and re.search(
+            rf'<article class="project">.*?<h3>{title}</h3>.*?<div class="project-visual" data-project-visual="{key}"',
+            html,
+            re.DOTALL,
+        )
+        for key, title in (
+            ("darksense", "DarkSense AI"),
+            ("skillforge", "SkillForge Academy"),
+            ("agrovalue", "AgroValue"),
+            ("frozenlake", "FrozenLake Q-learning"),
+        )
+    ),
+    "four distinct project illustrations": len(re.findall(r'data-project-visual="(?:darksense|skillforge|agrovalue|frozenlake)"', html)) == 4,
+    "no external image dependencies": not re.search(r'<img\\b|url\\(https?://', html, re.IGNORECASE),
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
 }
