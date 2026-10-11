@@ -30,6 +30,14 @@ class SiteParser(HTMLParser):
 
 parser = SiteParser()
 parser.feed(html)
+project_cards = re.findall(r'<article class="project">(.*?)</article>', html, re.DOTALL)
+expected_project_maps = (
+    ("DarkSense AI", "darksense"),
+    ("SkillForge Academy", "skillforge"),
+    ("AgroValue", "agrovalue"),
+    ("FrozenLake Q-learning", "frozenlake"),
+)
+
 checks = {
     "HTML5 doctype": html.lstrip().lower().startswith("<!doctype html>"),
     "language attribute": '<html lang="en">' in html,
@@ -49,22 +57,11 @@ checks = {
     "reduced-motion support": "prefers-reduced-motion:reduce" in html,
 
     "project workflow mapping is explicit": all(
-        re.search(
-            rf'<article class="project">.*?<div class="project-map" data-project-map="{key}"',
-            html,
-            re.DOTALL,
+        any(
+            f"<h3>{title}</h3>" in card and f'data-project-map="{key}"' in card
+            for card in project_cards
         )
-        and re.search(
-            rf'<article class="project">.*?<div class="project-map" data-project-map="{key}".*?<h3>{title}</h3>',
-            html,
-            re.DOTALL,
-        )
-        for key, title in (
-            ("darksense", "DarkSense AI"),
-            ("skillforge", "SkillForge Academy"),
-            ("agrovalue", "AgroValue"),
-            ("frozenlake", "FrozenLake Q-learning"),
-        )
+        for title, key in expected_project_maps
     ),
     "four distinct project workflows": len(re.findall(r'data-project-map="(?:darksense|skillforge|agrovalue|frozenlake)"', html)) == 4,
     "no external image dependencies": not re.search(r'<img\b|url\(https?://', html, re.IGNORECASE),
