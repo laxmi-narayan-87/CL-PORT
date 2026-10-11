@@ -48,14 +48,14 @@ checks = {
     "skip link": 'class="skip" href="#main"' in html,
     "reduced-motion support": "prefers-reduced-motion:reduce" in html,
 
-    "project visual mapping is explicit": all(
+    "project workflow mapping is explicit": all(
         re.search(
-            rf'<article class="project">.*?<div class="project-visual" data-project-visual="{key}"',
+            rf'<article class="project">.*?<div class="project-map" data-project-map="{key}"',
             html,
             re.DOTALL,
         )
         and re.search(
-            rf'<article class="project">.*?<div class="project-visual" data-project-visual="{key}".*?<h3>{title}</h3>',
+            rf'<article class="project">.*?<div class="project-map" data-project-map="{key}".*?<h3>{title}</h3>',
             html,
             re.DOTALL,
         )
@@ -66,8 +66,8 @@ checks = {
             ("frozenlake", "FrozenLake Q-learning"),
         )
     ),
-    "four distinct project illustrations": len(re.findall(r'data-project-visual="(?:darksense|skillforge|agrovalue|frozenlake)"', html)) == 4,
-    "no external image dependencies": not re.search(r'<img\\b|url\\(https?://', html, re.IGNORECASE),
+    "four distinct project workflows": len(re.findall(r'data-project-map="(?:darksense|skillforge|agrovalue|frozenlake)"', html)) == 4,
+    "no external image dependencies": not re.search(r'<img\b|url\(https?://', html, re.IGNORECASE),
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
 }
