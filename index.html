@@ -19,8 +19,10 @@
 .button.secondary:hover{border-color:var(--olive);color:var(--olive)}
 .project{border-radius:3px;transition:border-color .18s ease,background-color .18s ease,transform .18s ease}
 .project:hover{border-color:rgba(101,112,84,.6);background:rgba(234,231,217,.48);transform:translateY(-2px)}
-.project .proof a{display:inline-block;margin-top:.55rem;font-weight:650;text-decoration-thickness:1px;text-decoration-color:var(--clay);text-underline-offset:.24em}
+.project .proof a{margin-top:.25rem;font-weight:650;text-decoration-thickness:1px;text-decoration-color:var(--clay);text-underline-offset:.24em}
 .project .proof a:hover{text-decoration-color:currentColor}
+.project .proof a,.about-grid a,footer a{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 0}
+.project .proof a:focus-visible,.about-grid a:focus-visible,footer a:focus-visible{border-radius:2px}
 .build-card h3,.evidence-block h3,.personal h3{letter-spacing:-.025em}
 .contact .button:not(.primary):hover{background:rgba(248,246,240,.1);border-color:var(--paper)}
 @media(max-width:760px){
