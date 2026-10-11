@@ -55,7 +55,7 @@ checks = {
             re.DOTALL,
         )
         and re.search(
-            rf'<article class="project">.*?<h3>{title}</h3>.*?<div class="project-visual" data-project-visual="{key}"',
+            rf'<article class="project">.*?<div class="project-visual" data-project-visual="{key}".*?<h3>{title}</h3>',
             html,
             re.DOTALL,
         )
