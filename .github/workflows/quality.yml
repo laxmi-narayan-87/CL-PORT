@@ -2,7 +2,7 @@ name: Static site quality checks
 
 on:
   push:
-    branches: [main, ui-ux-refresh, portfolio]
+    branches: [main, ui-ux-refresh, ui-ux-fixes, portfolio]
   pull_request:
     branches: [main, portfolio]
   workflow_dispatch:
