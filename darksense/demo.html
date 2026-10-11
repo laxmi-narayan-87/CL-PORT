@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8f3">
+<meta name="description" content="The DarkSense AI interactive demo is in preparation. Explore the project and its current research approach in the meantime.">
+<title>Interactive Demo — Coming Soon | DarkSense AI</title>
+<style>
+:root{color-scheme:light;--bg:#f7f8f3;--surface:#fff;--line:#d7ded2;--text:#1c281e;--muted:#536252;--accent:#315f39;--soft:#edf1e8}
+*{box-sizing:border-box}
+html{min-height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible{outline:3px solid #b45f18;outline-offset:4px}
+.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+header{border-bottom:1px solid var(--line);background:rgba(247,248,243,.96)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;font-weight:780;letter-spacing:-.04em}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--accent);color:var(--accent);font-size:19px}
+.back-link{font-size:.88rem;color:var(--muted);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.back-link:hover{color:var(--accent)}
+main{flex:1;display:grid;place-items:center;padding:clamp(44px,8vw,100px) 0}
+.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);gap:clamp(35px,7vw,90px);align-items:center}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin:0 0 25px}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--accent)}
+h1{font-size:clamp(3.3rem,8vw,6.8rem);line-height:.92;letter-spacing:-.085em;margin:0 0 25px;max-width:700px}
+h1 span{color:var(--accent)}
+.lede{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.5;color:#354535;max-width:620px;margin:0 0 16px}
+.body-copy{color:var(--muted);max-width:590px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;font-weight:750;text-decoration:none;border:1px solid var(--line);border-radius:4px}
+.button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.button.primary:hover{background:#244b2b}
+.button.secondary:hover{border-color:var(--accent);color:var(--accent)}
+.panel{background:var(--surface);border:1px solid var(--line);padding:clamp(22px,3.5vw,34px);position:relative}
+.panel:before{content:"";position:absolute;top:-1px;left:-1px;width:54px;height:3px;background:var(--accent)}
+.panel-label{font-size:.72rem;font-weight:800;letter-spacing:.14em;color:var(--accent)}
+.status{display:flex;align-items:center;gap:8px;margin:20px 0 12px;font-weight:750}
+.status-dot{width:9px;height:9px;border-radius:50%;background:#c28a31;box-shadow:0 0 0 4px #f6ecd9}
+.panel p{color:var(--muted);font-size:.92rem;margin:0}
+.rule{height:1px;background:var(--line);margin:22px 0}
+.stage{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.stage:last-child{border-bottom:0;padding-bottom:0}
+.stage-number{color:var(--accent);font-size:.75rem;font-weight:800}
+.stage strong{display:block;font-size:.91rem}
+.stage span{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:15px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.panel{max-width:600px}.back-link{font-size:.8rem}}
+@media(max-width:480px){.wrap{width:calc(100% - 32px)}.nav{min-height:68px}.brand{font-size:.94rem}.layout{gap:35px}h1{font-size:clamp(3.15rem,16vw,4.8rem)}.actions{flex-direction:column;align-items:stretch}.button{width:100%}.footer-inner{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="index.html" aria-label="DarkSense AI home"><span class="brand-mark" aria-hidden="true">◉</span><span>DarkSense AI</span></a><a class="back-link" href="index.html">← Back to project</a></div></header>
+<main><div class="wrap layout"><section><p class="eyebrow">Interactive demo · In preparation</p><h1>Something thoughtful is <span>coming.</span></h1><p class="lede">The DarkSense AI interactive demo is on its way.</p><p class="body-copy">The project is exploring how browser automation and machine-learning experiments can help surface potentially deceptive interface patterns. The interactive experience is still being prepared; this page is a preview, not a working scanner.</p><div class="actions"><a class="button primary" href="index.html">Explore the project <span aria-hidden="true">↗</span></a><a class="button secondary" href="https://github.com/laxmi-narayan-87/CL-PORT/tree/main/darksense" target="_blank" rel="noopener noreferrer">View project source <span aria-hidden="true">↗</span></a></div></section><aside class="panel" aria-label="Demo status"><span class="panel-label">BUILD STATUS / 01</span><div class="status"><span class="status-dot" aria-hidden="true"></span><span>Demo release in preparation</span></div><p>Until the interactive demo is ready, you can review the current project scope, implementation flow and recorded experiment notes.</p><div class="rule"></div><div class="stage"><span class="stage-number">01</span><div><strong>Project overview</strong><span>Available now</span></div></div><div class="stage"><span class="stage-number">02</span><div><strong>Implementation notes</strong><span>Available now</span></div></div><div class="stage"><span class="stage-number">03</span><div><strong>Interactive demo</strong><span>Coming soon · No release date announced</span></div></div></aside></div></main>
+<footer><div class="wrap footer-inner"><span>DarkSense AI · Website interface research</span><span>Research preview — not a live detection service.</span></div></footer>
+</body>
+</html>
