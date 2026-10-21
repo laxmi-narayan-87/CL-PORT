@@ -4,57 +4,49 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f8f6f0">
-<meta name="description" content="Browse Laxmi Narayan's recorded learning and credentials, filter by technical focus, and match relevant entries to a job description.">
+<meta name="description" content="Certifications and recorded learning completed or undertaken by Laxmi Narayan, with available credential verification and course links.">
 <meta name="robots" content="noindex, follow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Laxmi Narayan — Portfolio">
-<meta property="og:title" content="Learning & Credentials — Laxmi Narayan">
-<meta property="og:description" content="Explore recorded learning and credentials by topic, or match them to a job description.">
+<meta property="og:title" content="Certifications — Laxmi Narayan">
+<meta property="og:description" content="Browse recorded certifications and learning with available credential links.">
 <meta property="og:url" content="https://cl-port-staging-portfolio.vercel.app/certifications/">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Learning & Credentials — Laxmi Narayan">
-<meta name="twitter:description" content="Explore recorded learning and credentials by topic, or match them to a job description.">
+<meta name="twitter:title" content="Certifications — Laxmi Narayan">
+<meta name="twitter:description" content="Browse recorded certifications and learning with available credential links.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; connect-src 'self'; upgrade-insecure-requests">
-<title>Learning &amp; Credentials | Laxmi Narayan</title>
+<title>Certifications | Laxmi Narayan</title>
 <link rel="stylesheet" href="/assets/project.css">
 <link rel="stylesheet" href="/assets/certifications.css">
 <script src="/assets/certifications.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to certifications</a>
 <nav class="wrap nav" aria-label="Portfolio navigation">
 <a href="/">← Laxmi Narayan / Portfolio</a>
-<div class="nav-links"><a href="/#achievements">Achievements</a><a href="#matcher">Match a job description</a><a href="#library">Browse library</a></div>
 </nav>
 <main id="main" class="wrap">
 <header class="page-header">
-<p class="eyebrow">Learning · Credentials · Job relevance</p>
-<h1>Learning, mapped to the work.</h1>
-<p class="lead">A structured view of recorded courses and credentials, with topic filters and a local job-description matcher. The matching result shows tag overlap—not certification quality, eligibility, or proof of practical skill.</p>
-<div class="stats" aria-label="Inventory summary"><div><strong id="total-count">56</strong><span>recorded entries</span></div><div><strong id="course-count">38</strong><span>public course pages</span></div><div><strong id="verified-count">3</strong><span>personal credential URLs</span></div></div>
-<p class="notice"><strong>Important distinction.</strong> “Verify this credential” opens a learner-specific URL supplied in the inventory. “View public course page” opens the provider’s general course/catalog page; it does not prove course completion. Entries without a personal URL remain visible but are not presented as independently verified.</p>
+<p class="eyebrow">Certifications &amp; learning</p>
+<h1>Certifications.</h1>
+<p class="lead">A record of courses and credentials across AI/ML, Python, software engineering, data, cloud, and web development.</p>
 </header>
-<section id="matcher" class="section" aria-labelledby="matcher-title">
-<div class="section-heading"><p class="eyebrow">01 / Match a role</p><h2 id="matcher-title">Which learning is relevant to this JD?</h2><p>Paste a job description. This page detects matching topics from the inventory and ranks records by shared tags. Matching runs in your browser; the text is not sent to a server.</p></div>
-<label for="jd-text">Job description</label>
-<textarea id="jd-text" rows="7" placeholder="Paste the job description here — responsibilities, required skills, tools, and qualifications."></textarea>
-<div class="button-row"><button type="button" class="button primary" id="match-jd">Match credentials</button><button type="button" class="button" id="clear-jd">Clear job description</button></div>
-<p id="match-status" class="status" role="status" aria-live="polite">Paste a JD and select “Match credentials” to rank the inventory.</p>
-</section>
-<section id="library" class="section" aria-labelledby="library-title">
-<div class="section-heading"><p class="eyebrow">02 / Explore the inventory</p><h2 id="library-title">Learning &amp; credentials</h2><p>Filter by topic or search titles, provider names, and tags. Use the record title exactly as stored when tailoring a resume.</p></div>
-<div class="filter-panel">
-<div class="field"><label for="search">Search records</label><input id="search" type="search" placeholder="e.g. Python, Oracle, prompt engineering" autocomplete="off"></div>
-<div class="field"><label for="focus">Focus area</label><select id="focus"><option value="">All focus areas</option><option>AI &amp; machine learning</option><option>Generative AI &amp; responsible AI</option><option>Python &amp; data</option><option>Software engineering &amp; databases</option><option>Web development</option><option>Cloud &amp; infrastructure</option><option>Leadership &amp; productivity</option><option>Other</option></select></div>
-<label class="check-field"><input type="checkbox" id="only-credential-url"><span>Only records with a personal credential URL</span></label>
+<section class="section" id="certifications" aria-labelledby="certifications-title">
+<div class="section-heading">
+<h2 id="certifications-title">Certification library</h2>
+<p>Search by title, provider, platform, or topic. Personal credential links are shown only where they were supplied; public course pages are labeled separately.</p>
 </div>
-<p id="results-count" class="results-count" role="status" aria-live="polite">Loading the catalog…</p>
-<div id="results" class="credential-grid" aria-label="Filtered learning and credential records"></div>
-<div id="load-error" class="load-error" hidden>Could not load the certification data. Please refresh the page or inspect the source repository.</div>
+<div class="filter-panel">
+<div class="field"><label for="search">Search certifications</label><input id="search" type="search" placeholder="e.g. Python, Oracle, prompt engineering" autocomplete="off"></div>
+<div class="field"><label for="focus">Filter by area</label><select id="focus"><option value="">All areas</option><option>AI &amp; machine learning</option><option>Generative AI &amp; responsible AI</option><option>Python &amp; data</option><option>Software engineering &amp; databases</option><option>Web development</option><option>Cloud &amp; infrastructure</option><option>Leadership &amp; productivity</option><option>Other</option></select></div>
+</div>
+<p id="results-count" class="results-count" role="status" aria-live="polite">Loading certifications…</p>
+<div id="results" class="credential-grid" aria-label="Certifications and learning records"></div>
+<div id="load-error" class="load-error" hidden>Could not load certification records. Refresh the page or inspect the source repository.</div>
 </section>
 </main>
-<footer class="wrap page-footer"><span>© 2026 Laxmi Narayan</span><span>Static data · No tracking · No external JavaScript</span><a href="/">Back to portfolio ↑</a></footer>
-<noscript><p class="wrap notice">JavaScript is required for search and job-description matching. The source data remains available in the repository.</p></noscript>
+<footer class="wrap page-footer"><span>© 2026 Laxmi Narayan</span><a href="/">Back to portfolio</a></footer>
+<noscript><p class="wrap notice">JavaScript is required to search and filter the certification list. The source data is available in the repository.</p></noscript>
 </body>
 </html>
