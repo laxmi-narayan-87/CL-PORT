@@ -23,6 +23,8 @@
 - [x] Made the root quality workflow execute both the root-site checks and the staging SEO/header checks. The inactive nested workflow file was removed to avoid implying GitHub runs it.
 - [x] Added production-side CI checks in `laxmi-narayan-87/portfolio` to enforce `index, follow`, exact production canonicals, Open Graph URLs, and the homepage structured-data URL across the homepage and five case studies.
 - [x] Kept the original production HTML, canonical metadata, and production sitemap unchanged; the production change is limited to its checker and quality workflow.
+- [x] GitHub Actions quality and GitHub Pages deploy jobs succeeded for the updated `CL-PORT` head commit ([check runs](https://github.com/laxmi-narayan-87/CL-PORT/commit/cda5bd2cac7f3ec5173f5bb9cac74331624bf251/checks)).
+- [x] Production portfolio quality, build, and deploy checks succeeded after adding SEO regression guards ([check runs](https://github.com/laxmi-narayan-87/portfolio/commit/7eef4cabb5c75b5d2f8bc65bb7aa8db9452a1c4d/checks)).
 
 ## Account and deployment checks still requiring dashboard access
 
@@ -32,7 +34,7 @@ These cannot be safely inferred from source code. The connected Vercel API curre
 - [ ] **Vercel privacy:** Confirm Deployment Protection / Vercel Authentication (SSO) is enabled if the staging page is intended to be private. If you deliberately make it public for review, keep the `noindex` meta tag and response header. `noindex` is not access control.
 - [ ] **Domain and configuration separation:** Confirm the staging project has no production custom domain, and is not sharing production redirects, routing rules, environment variables, or a project/domain alias with the original portfolio.
 - [ ] **GitHub branch rules:** Add rulesets for `CL-PORT:main` and `portfolio:portfolio`: require pull requests, require the relevant `Static site quality checks / quality` job to pass, block force pushes, and prevent branch deletion. For a solo-maintained portfolio, requiring one external approval can make the branch impossible for you to merge; prioritize PR + checks and decide review requirements accordingly.
-- [ ] **Deployment verification:** After the next GitHub Actions run completes, confirm the root site still works, the GitHub Pages path `/CL-PORT/staging-portfolio/` is no longer published, and the separate Vercel staging site serves the `X-Robots-Tag` header. The active Vercel project could not be inspected from this connection.
+- [ ] **Live response verification:** Confirm `/CL-PORT/staging-portfolio/` returns no staged content and the Vercel staging site sends `X-Robots-Tag: noindex, follow`. The GitHub Pages deployment completed successfully and its artifact build explicitly excludes staging, but this connection could not fetch the resulting Pages URL or inspect Vercel response headers directly.
 - [ ] **Search Console review:** Keep the production Search Console property and sitemap limited to the original portfolio URL and `https://laxmi-narayan-87.github.io/portfolio/sitemap.xml`. Do not submit a staging sitemap. If any old staging URL remains in results, inspect that exact staging URL and request recrawling/removal for staging URLs only; never remove the production URLs.
 
 ## Release checklist for every future change
