@@ -50,6 +50,28 @@ checks = {
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
 }
+
+# Keep the testing copy out of the public GitHub Pages artifact.
+pages_workflow = Path(".github/workflows/deploy-pages.yml")
+quality_workflow = Path(".github/workflows/quality.yml")
+staging_checker = Path("staging-portfolio/.github/scripts/check_site.py")
+if pages_workflow.is_file():
+    pages_text = pages_workflow.read_text(encoding="utf-8")
+    checks["GitHub Pages artifact is isolated from staging"] = (
+        "staging-portfolio" in pages_text and "path: _site" in pages_text
+    )
+else:
+    checks["GitHub Pages deployment workflow exists"] = False
+if quality_workflow.is_file():
+    quality_text = quality_workflow.read_text(encoding="utf-8")
+    checks["main quality workflow runs staging guard"] = (
+        "staging-portfolio/.github/scripts/check_site.py" in quality_text
+    )
+else:
+    checks["quality workflow exists"] = False
+checks["staging SEO guard exists"] = staging_checker.is_file()
+checks["public root page does not link to staging path"] = "/staging-portfolio/" not in html
+
 failed = [name for name, passed in checks.items() if not passed]
 for name, passed in checks.items():
     print(f'{"PASS" if passed else "FAIL"}: {name}')
