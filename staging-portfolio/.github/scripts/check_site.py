@@ -9,6 +9,8 @@ HOME = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 GOOGLE_VERIFICATION = ROOT / "google962efd04cf37010b.html"
 VERCEL_CONFIG = ROOT / "vercel.json"
+CERTIFICATION_DATA = ROOT / "data" / "certifications.json"
+CERTIFICATION_SCRIPT = ROOT / "assets" / "certifications.js"
 
 required_pages = [
     "projects/darksense-ai/index.html",
