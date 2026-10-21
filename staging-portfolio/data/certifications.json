@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "stanford-ml-1",
+    "title": "Supervised Machine Learning: Regression and Classification",
+    "issuer": "DeepLearning.AI / Stanford University",
+    "platform": "Coursera",
+    "date": "2026-06",
+    "tags": [
+      "machine-learning",
+      "supervised-learning",
+      "regression",
+      "classification",
+      "python",
+      "scikit-learn"
+    ],
+    "link": "https://coursera.org/share/776e72c1e72e608936eb10974c36e174",
+    "course_url": "https://www.coursera.org/learn/machine-learning/",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Python & data"
+    ]
+  },
+  {
+    "id": "stanford-ml-2",
+    "title": "Advanced Learning Algorithms",
+    "issuer": "DeepLearning.AI / Stanford University",
+    "platform": "Coursera",
+    "date": "2026-06",
+    "tags": [
+      "machine-learning",
+      "neural-networks",
+      "deep-learning",
+      "tensorflow",
+      "python"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/learn/advanced-learning-algorithms",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Python & data"
+    ]
+  },
+  {
+    "id": "stanford-ml-3",
+    "title": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+    "issuer": "DeepLearning.AI / Stanford University",
+    "platform": "Coursera",
+    "date": "2026-06",
+    "tags": [
+      "machine-learning",
+      "unsupervised-learning",
+      "recommender-systems",
+      "reinforcement-learning",
+      "clustering",
+      "python"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Python & data"
+    ]
+  },
+  {
+    "id": "ibm-sw-engineering",
+    "title": "Introduction to Software Engineering",
+    "issuer": "IBM",
+    "platform": "Coursera",
+    "date": "2025-11",
+    "tags": [
+      "software-engineering",
+      "sdlc",
+      "agile",
+      "programming"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/learn/introduction-to-software-engineering",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "jhu-data-science",
+    "title": "A Crash Course in Data Science",
+    "issuer": "Johns Hopkins University",
+    "platform": "Coursera",
+    "date": "2025-09",
+    "tags": [
+      "data-science",
+      "data-analysis",
+      "statistics",
+      "r",
+      "analytics",
+      "reporting"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/learn/data-science-course",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "Python & data"
+    ]
+  },
+  {
+    "id": "coursera-pandas-numpy",
+    "title": "Python for Data Analysis: Pandas & NumPy",
+    "issuer": "Coursera",
+    "platform": "Coursera",
+    "date": "2025-12",
+    "tags": [
+      "python",
+      "pandas",
+      "numpy",
+      "data-analysis",
+      "data-science",
+      "analytics",
+      "automation"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/projects/python-for-data-analysis-numpy",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "Python & data"
+    ]
+  },
+  {
+    "id": "coursera-genai",
+    "title": "GenAI for Everyone",
+    "issuer": "Coursera",
+    "platform": "Coursera",
+    "date": "2025-12",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "prompt-engineering"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/learn/genai-for-everyone",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "ust-python",
+    "title": "Create Your First Python Program From UST",
+    "issuer": "UST",
+    "platform": "Coursera",
+    "date": "2023-09",
+    "tags": [
+      "python",
+      "programming-basics"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/projects/first-python-program-ust",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-young-python-pro",
+    "title": "Young Python Professional",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-07",
+    "tags": [
+      "python",
+      "programming",
+      "certification"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-oop-python",
+    "title": "Object Oriented Programming using Python",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-07",
+    "tags": [
+      "python",
+      "oop",
+      "object-oriented-programming"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-dbms-2",
+    "title": "Database Management System Part 2",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-07",
+    "tags": [
+      "database",
+      "sql",
+      "dbms",
+      "mysql",
+      "data-management"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-dbms-1",
+    "title": "Database Management System Part 1",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-06",
+    "tags": [
+      "database",
+      "sql",
+      "dbms",
+      "data-management"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-agile-scrum",
+    "title": "Agile Scrum in Practice",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-06",
+    "tags": [
+      "agile",
+      "scrum",
+      "project-management",
+      "software-engineering",
+      "operations"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Software engineering & databases",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "infosys-sw-agile",
+    "title": "Software Engineering and Agile software development",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-06",
+    "tags": [
+      "software-engineering",
+      "agile",
+      "sdlc",
+      "operations"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-ai-intro",
+    "title": "Introduction to Artificial Intelligence",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-05",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "machine-learning"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "AI & machine learning"
+    ]
+  },
+  {
+    "id": "infosys-python-data-science",
+    "title": "Python for Data Science",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-01",
+    "tags": [
+      "python",
+      "data-science",
+      "pandas",
+      "numpy",
+      "analytics"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data"
+    ]
+  },
+  {
+    "id": "infosys-css3",
+    "title": "CSS3",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2025-01",
+    "tags": [
+      "css",
+      "web-development",
+      "frontend"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Web development"
+    ]
+  },
+  {
+    "id": "infosys-python-fundamentals-2",
+    "title": "Programming Fundamentals using Python - Part 2",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2024-10",
+    "tags": [
+      "python",
+      "programming-basics"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-python-fundamentals-1",
+    "title": "Programming Fundamentals using Python - Part 1",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2024-10",
+    "tags": [
+      "python",
+      "programming-basics"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-html5",
+    "title": "HTML5 - The Language",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2024-10",
+    "tags": [
+      "html",
+      "web-development",
+      "frontend"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Web development"
+    ]
+  },
+  {
+    "id": "infosys-python-basics",
+    "title": "Basics of Python",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2024-09",
+    "tags": [
+      "python",
+      "programming-basics"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Python & data",
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "infosys-ethical-ai",
+    "title": "Ethical AI",
+    "issuer": "Infosys Springboard",
+    "platform": "Infosys Springboard",
+    "date": "2024-08",
+    "tags": [
+      "artificial-intelligence",
+      "ai-ethics",
+      "responsible-ai"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "anthropic-claude-101",
+    "title": "Claude 101",
+    "issuer": "Anthropic Education",
+    "platform": "Skilljar",
+    "date": "2026-03",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "claude",
+      "anthropic",
+      "ai",
+      "prompt-engineering"
+    ],
+    "link": "https://verify.skilljar.com/c/7q4tkfc2sqrg",
+    "course_url": "https://anthropic.skilljar.com/claude-101",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "devtown-cert",
+    "title": "DevTown Certification",
+    "issuer": "DevTown",
+    "platform": "DevTown",
+    "date": "2024-03",
+    "tags": [
+      "programming",
+      "software-development"
+    ],
+    "link": "https://cert.devtown.in/verify/4XXVjxnS",
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "Software engineering & databases"
+    ]
+  },
+  {
+    "id": "li-career-essentials-genai",
+    "title": "Career Essentials in Generative AI",
+    "issuer": "Microsoft & LinkedIn",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "career-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/paths/career-essentials-in-generative-ai-by-microsoft-and-linkedin",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-ai-managers",
+    "title": "AI for Managers",
+    "issuer": "Microsoft & LinkedIn",
+    "platform": "LinkedIn Learning",
+    "date": "2025-10",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "management",
+      "leadership"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/paths/ai-for-managers-by-microsoft-and-linkedin",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-ai-org-leaders",
+    "title": "AI for Organizational Leaders",
+    "issuer": "Microsoft & LinkedIn",
+    "platform": "LinkedIn Learning",
+    "date": "2025-10",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "leadership",
+      "strategy"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/paths/ai-for-organizational-leaders-by-microsoft-and-linkedin",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-genai-learning-dev",
+    "title": "Generative AI for Learning and Development Professional Certificate",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2025-10",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "learning-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/paths/generative-ai-for-learning-and-development-professional-certificate-by-linkedin-learning",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-ai-challenges-leadership",
+    "title": "AI Challenges and Opportunities for Leadership",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "leadership"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/ai-challenges-and-opportunities-for-leadership",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-ai-literacy-business",
+    "title": "AI Literacy for Business Leaders",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "business",
+      "leadership"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/ai-literacy-for-business-leaders",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-amplify-critical-thinking-genai",
+    "title": "Amplify Your Critical Thinking with Generative AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "critical-thinking"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/amplify-your-critical-thinking-with-generative-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-ai-powered-people-manager",
+    "title": "Become an AI-Powered People Manager",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "management",
+      "people"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/become-an-ai-powered-people-manager",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-collaborative-team-culture-ai",
+    "title": "Building a Collaborative Team Culture with AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "collaboration",
+      "team"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/building-a-collaborative-team-culture-with-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-enhance-coaching-genai",
+    "title": "Enhance Your Coaching Impact with Generative AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "coaching"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/enhance-your-coaching-impact-with-generative-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-ethics-genai",
+    "title": "Ethics in the Age of Generative AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "ethics",
+      "responsible-ai"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/ethics-in-the-age-of-generative-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-genai-evolution-search",
+    "title": "Generative AI: The Evolution of Thoughtful Online Search",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-06",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "search"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/generative-ai-the-evolution-of-thoughtful-online-search",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-genai-learning-dev-2",
+    "title": "Generative AI in Learning and Development",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "learning-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/generative-ai-in-learning-and-development",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-keep-team-bleeding-edge-ai",
+    "title": "How to Keep Your Team on the Bleeding Edge of AI Innovation",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "innovation",
+      "leadership"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/how-to-keep-your-team-on-the-bleeding-edge-of-ai-innovation",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-integrating-genai-business",
+    "title": "Integrating Generative AI into Business Strategy",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "business-strategy"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/integrating-generative-ai-into-business-strategy",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-intro-ai-2023",
+    "title": "Introduction to Artificial Intelligence",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-07",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "machine-learning",
+      "introduction"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/introduction-to-artificial-intelligence-24947908",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning"
+    ]
+  },
+  {
+    "id": "li-intro-prompt-engineering",
+    "title": "Introduction to Prompt Engineering for Generative AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2023-10",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "prompt-engineering",
+      "ai"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/introduction-to-prompt-engineering-for-generative-ai-24636124",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-leading-responsible-ai",
+    "title": "Leading Responsible AI in Organizations",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "responsible-ai",
+      "ethics",
+      "leadership"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/leading-responsible-ai-in-organizations",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-m365-copilot-dec2023",
+    "title": "Learning Microsoft 365 Copilot",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-06",
+    "tags": [
+      "microsoft-365",
+      "copilot",
+      "ai",
+      "productivity"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-m365-copilot-work-2024",
+    "title": "Learning Microsoft 365 Copilot for Work",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2025-01",
+    "tags": [
+      "microsoft-365",
+      "copilot",
+      "ai",
+      "productivity"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/learning-microsoft-365-copilot-for-work-2024",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-practical-guide-upskilling-ai",
+    "title": "A Practical Guide to Upskilling Your Organization on AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "upskilling",
+      "learning-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/a-practical-guide-to-upskilling-your-organization-on-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-responsible-ai-managers",
+    "title": "Responsible AI for Managers",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "responsible-ai",
+      "management"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/responsible-ai-for-managers",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-streamlining-copilot",
+    "title": "Streamlining Your Work with Microsoft Copilot",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-06",
+    "tags": [
+      "microsoft-365",
+      "copilot",
+      "ai",
+      "productivity"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/streamlining-your-work-with-microsoft-copilot-25840178",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-future-workforce-learning-ai",
+    "title": "The Future of Workforce Learning: AI-Powered Personalization for Skill Development",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-12",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "learning-development",
+      "future-of-work"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/the-future-of-workforce-learning-ai-powered-personalization-for-skill-development",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-managers-guide-career-ai",
+    "title": "The Manager's Guide to Career Conversations in the Age of AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "management",
+      "career-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/the-manager-s-guide-to-career-conversations-in-the-age-of-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-using-genai-personalized-learning",
+    "title": "Using Gen AI to Develop Personalized Learning Plans",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2025-01",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "learning-development"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/using-gen-ai-to-develop-personalized-learning-plans",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-what-is-genai",
+    "title": "What Is Generative AI",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-11",
+    "tags": [
+      "generative-ai",
+      "llm",
+      "ai",
+      "introduction"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/what-is-generative-ai",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI"
+    ]
+  },
+  {
+    "id": "li-nano-chatgpt-business",
+    "title": "Nano Tips for Using ChatGPT for Business",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-07",
+    "tags": [
+      "generative-ai",
+      "chatgpt",
+      "ai",
+      "business"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/nano-tips-for-using-chatgpt-for-business-with-rachel-woods",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "li-nano-data-analysis-chatgpt",
+    "title": "Nano Tips for Navigating Advanced Data Analysis in ChatGPT",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-09",
+    "tags": [
+      "generative-ai",
+      "chatgpt",
+      "data-analysis",
+      "ai"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "AI & machine learning",
+      "Generative AI & responsible AI",
+      "Python & data"
+    ]
+  },
+  {
+    "id": "li-nano-ai-effective-manager",
+    "title": "Nano Tips to Use AI to Be a More Effective Manager",
+    "issuer": "LinkedIn Learning",
+    "platform": "LinkedIn Learning",
+    "date": "2024-10",
+    "tags": [
+      "artificial-intelligence",
+      "ai",
+      "management"
+    ],
+    "link": null,
+    "course_url": "https://www.linkedin.com/learning/nano-tips-to-use-ai-to-be-a-more-effective-manager-with-ashley-herd",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Leadership & productivity"
+    ]
+  },
+  {
+    "id": "stanford-ml-specialization",
+    "title": "Machine Learning Specialization",
+    "issuer": "DeepLearning.AI / Stanford University",
+    "platform": "Coursera",
+    "date": "2026-06",
+    "tags": [
+      "machine-learning",
+      "supervised-learning",
+      "unsupervised-learning",
+      "neural-networks",
+      "deep-learning",
+      "tensorflow",
+      "python",
+      "scikit-learn",
+      "recommender-systems",
+      "reinforcement-learning",
+      "clustering"
+    ],
+    "link": null,
+    "course_url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "course_url_checked": "2026-10-22",
+    "focus_areas": [
+      "AI & machine learning",
+      "Python & data"
+    ]
+  },
+  {
+    "id": "oracle-oci-ai-foundations-2025",
+    "title": "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+    "issuer": "Oracle",
+    "platform": "Oracle",
+    "date": "2025-10",
+    "tags": [
+      "oracle",
+      "cloud",
+      "oci",
+      "artificial-intelligence",
+      "ai",
+      "machine-learning",
+      "cloud-computing"
+    ],
+    "link": null,
+    "course_url": null,
+    "course_url_checked": null,
+    "focus_areas": [
+      "AI & machine learning",
+      "Cloud & infrastructure"
+    ]
+  }
+]

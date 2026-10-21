@@ -16,6 +16,7 @@ required_pages = [
     "projects/agrovalue/index.html",
     "projects/q-learning-frozenlake/index.html",
     "projects/qa-automation/index.html",
+    "certifications/index.html",
 ]
 
 if not HOME.is_file():
@@ -61,6 +62,40 @@ for phrase in placeholder_phrases:
 
 for page in required_pages:
     checks[f"case study exists: {page}"] = (ROOT / page).is_file()
+
+
+# Validate the client-side certification explorer's data and CSP boundary.
+CERT_PAGE = ROOT / "certifications" / "index.html"
+CERT_PAGE_HTML = CERT_PAGE.read_text(encoding="utf-8") if CERT_PAGE.is_file() else ""
+CERT_JS = CERTIFICATION_SCRIPT.read_text(encoding="utf-8") if CERTIFICATION_SCRIPT.is_file() else ""
+try:
+    cert_records = json.loads(CERTIFICATION_DATA.read_text(encoding="utf-8"))
+    checks["certification JSON is a list"] = isinstance(cert_records, list)
+    checks["certification JSON preserves 56 records"] = isinstance(cert_records, list) and len(cert_records) == 56
+    cert_ids = [record.get("id") for record in cert_records] if isinstance(cert_records, list) else []
+    checks["certification record IDs are unique"] = len(cert_ids) == len(set(cert_ids)) and None not in cert_ids
+    checks["all certification records have required fields"] = isinstance(cert_records, list) and all(
+        all(key in record for key in ("id", "title", "issuer", "platform", "date", "tags", "link", "course_url", "course_url_checked", "focus_areas"))
+        for record in cert_records
+    )
+    checks["certification URLs are HTTPS or null"] = isinstance(cert_records, list) and all(
+        value is None or (isinstance(value, str) and value.startswith("https://"))
+        for record in cert_records for value in (record.get("link"), record.get("course_url"))
+    )
+except (OSError, json.JSONDecodeError, TypeError, AttributeError) as exc:
+    cert_records = []
+    checks["certification JSON is valid"] = False
+    print(f"Could not parse certification JSON: {exc}")
+
+cert_csp = re.search(r'<meta\s+http-equiv="Content-Security-Policy"\s+content="([^"]+)"', CERT_PAGE_HTML, re.I)
+checks["certification page exists"] = CERT_PAGE.is_file()
+checks["certification page uses self-only script policy"] = bool(cert_csp and "script-src 'self'" in cert_csp.group(1) and "script-src 'none'" not in cert_csp.group(1) and "'unsafe-inline'" not in cert_csp.group(1).split("script-src", 1)[1].split(";", 1)[0])
+checks["certification page uses a self-hosted deferred script"] = '<script src="/assets/certifications.js" defer></script>' in CERT_PAGE_HTML
+checks["certification page has no inline JavaScript"] = not re.search(r"<script(?![^>]*\bsrc=)[^>]*>", CERT_PAGE_HTML, re.I)
+checks["certification matcher loads local JSON"] = 'fetch(DATA_URL' in CERT_JS and 'const DATA_URL = "/data/certifications.json";' in CERT_JS
+checks["matcher distinguishes credential links from course pages"] = "Verify this credential" in CERT_JS and "View public course page" in CERT_JS
+checks["JD matching states tag-overlap limitation"] = "not credential quality" in CERT_JS
+checks["homepage links to certification explorer"] = 'href="/certifications/"' in html
 
 # Every staged HTML page must remain excluded from search results and use the staging host only.
 page_paths = ["index.html", *required_pages]
