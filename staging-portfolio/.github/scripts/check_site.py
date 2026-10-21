@@ -94,9 +94,9 @@ checks["certification page exists"] = CERT_PAGE.is_file()
 checks["certification page uses self-only script policy"] = bool(cert_csp and "script-src 'self'" in cert_csp.group(1) and "script-src 'none'" not in cert_csp.group(1) and "'unsafe-inline'" not in cert_csp.group(1).split("script-src", 1)[1].split(";", 1)[0])
 checks["certification page uses a self-hosted deferred script"] = '<script src="/assets/certifications.js" defer></script>' in CERT_PAGE_HTML
 checks["certification page has no inline JavaScript"] = not re.search(r"<script(?![^>]*\bsrc=)[^>]*>", CERT_PAGE_HTML, re.I)
-checks["certification matcher loads local JSON"] = 'fetch(DATA_URL' in CERT_JS and 'const DATA_URL = "/data/certifications.json";' in CERT_JS
-checks["matcher distinguishes credential links from course pages"] = "Verify this credential" in CERT_JS and "View public course page" in CERT_JS
-checks["JD matching states tag-overlap limitation"] = "not credential quality" in CERT_JS
+checks["certification list loads local JSON"] = 'fetch(DATA_URL' in CERT_JS and 'const DATA_URL = "/data/certifications.json";' in CERT_JS
+checks["certification list shows personal and course links separately"] = "Verify credential" in CERT_JS and "View course page" in CERT_JS
+checks["certification page excludes job-description matcher"] = 'id="jd-text"' not in CERT_PAGE_HTML and 'id="match-jd"' not in CERT_PAGE_HTML and "Which learning is relevant to this JD?" not in CERT_PAGE_HTML
 checks["homepage links to certification explorer"] = 'href="/certifications/"' in html
 
 # Every staged HTML page must remain excluded from search results and use the staging host only.
