@@ -3,8 +3,8 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-ROOT = Path(".")
-BASE_URL = "https://laxmi-narayan-87.github.io/portfolio/"
+ROOT = Path(__file__).resolve().parents[2]
+BASE_URL = "https://laxmi-narayan-87.github.io/CL-PORT/staging-portfolio/"
 HOME = ROOT / "index.html"
 SITEMAP = ROOT / "sitemap.xml"
 
