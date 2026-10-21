@@ -18,7 +18,7 @@ checks = {
     "responsive viewport": 'name="viewport"' in html,
     "page title": bool(re.search(r"<title>[^<]{10,}</title>", html, re.I)),
     "description metadata": bool(re.search(r'<meta name="description" content="[^"]{40,}"', html)),
-    "robots allow indexing": 'name="robots" content="index, follow"' in html,
+    "robots disable indexing": 'name="robots" content="noindex, follow"' in html,
     "canonical URL": f'<link rel="canonical" href="{BASE_URL}">' in html,
     "Open Graph title": 'property="og:title"' in html,
     "Open Graph description": 'property="og:description"' in html,
@@ -56,6 +56,14 @@ required_pages = [
 ]
 for page in required_pages:
     checks[f"case study exists: {page}"] = (ROOT / page).is_file()
+
+# Staging is for review only; every HTML page must discourage search indexing.
+for page_path in sorted(ROOT.rglob("*.html")):
+    page_html = page_path.read_text(encoding="utf-8")
+    relative_path = page_path.relative_to(ROOT).as_posix()
+    checks[f"noindex, follow metadata: {relative_path}"] = (
+        'name="robots" content="noindex, follow"' in page_html
+    )
 
 try:
     tree = ET.parse(SITEMAP)
