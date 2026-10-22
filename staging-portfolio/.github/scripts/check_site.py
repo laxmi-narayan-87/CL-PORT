@@ -11,6 +11,8 @@ GOOGLE_VERIFICATION = ROOT / "google962efd04cf37010b.html"
 VERCEL_CONFIG = ROOT / "vercel.json"
 CERTIFICATION_DATA = ROOT / "data" / "certifications.json"
 CERTIFICATION_SCRIPT = ROOT / "assets" / "certifications.js"
+BASE_CSS = ROOT / "assets" / "base.css"
+HOME_CSS = ROOT / "assets" / "home.css"
 
 required_pages = [
     "projects/darksense-ai/index.html",
@@ -25,6 +27,8 @@ if not HOME.is_file():
     sys.exit("FAIL: index.html is missing")
 
 html = HOME.read_text(encoding="utf-8")
+base_css = BASE_CSS.read_text(encoding="utf-8") if BASE_CSS.is_file() else ""
+home_css = HOME_CSS.read_text(encoding="utf-8") if HOME_CSS.is_file() else ""
 checks = {
     "HTML5 doctype": html.lstrip().lower().startswith("<!doctype html>"),
     "language attribute": '<html lang="en">' in html,
@@ -43,7 +47,11 @@ checks = {
     "no lorem ipsum placeholder": "lorem ipsum" not in html.lower(),
     "main landmark": '<main id="main">' in html,
     "skip link": 'class="skip" href="#main"' in html,
-    "reduced-motion support": "prefers-reduced-motion:reduce" in html,
+    "homepage links shared and page-specific styles": '<link rel="stylesheet" href="/assets/base.css">' in html and '<link rel="stylesheet" href="/assets/home.css">' in html,
+    "homepage has no inline CSS": "<style" not in html and " style=" not in html,
+    "homepage CSP restricts styles to same-origin": "style-src 'self'" in html and "style-src 'self' 'unsafe-inline'" not in html,
+    "shared stylesheets exist": BASE_CSS.is_file() and HOME_CSS.is_file() and bool(base_css) and bool(home_css),
+    "reduced-motion support": "prefers-reduced-motion: reduce" in base_css,
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
     "DarkSense links to its actual source": 'href="https://github.com/laxmi-narayan-87/CL-PORT/tree/main/darksense"' in html,
@@ -114,6 +122,7 @@ for page in page_paths:
     checks[f"no canonical tag: {relative}"] = not re.search(r'<link\s+rel="canonical"\b', page_html, re.I)
     checks[f"Open Graph URL uses staging host: {relative}"] = bool(og_url and og_url.group(1) == expected_url)
     checks[f"no legacy GitHub Pages staging URL: {relative}"] = "laxmi-narayan-87.github.io/CL-PORT/staging-portfolio/" not in page_html
+    checks[f"shared base stylesheet linked: {relative}"] = "assets/base.css" in page_html
 
 try:
     config = json.loads(VERCEL_CONFIG.read_text(encoding="utf-8"))

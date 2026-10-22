@@ -1,0 +1,31 @@
+/* Shared design foundations for all staging pages. */
+:root {
+  color-scheme: light;
+  --paper: #f8f6f0;
+  --sand: #eae7d9;
+  --ink: #292d26;
+  --muted: #64675e;
+  --olive: #657054;
+  --clay: #b96f50;
+  --line: rgba(41, 45, 38, .18);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --max: 900px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 var(--sans); }
+a { color: inherit; text-underline-offset: .22em; }
+a:hover { color: var(--olive); }
+a:focus-visible { outline: 3px solid var(--clay); outline-offset: 4px; }
+.wrap { width: min(var(--max), calc(100% - 2.5rem)); margin-inline: auto; }
+.eyebrow, .meta { font: .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--olive); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
