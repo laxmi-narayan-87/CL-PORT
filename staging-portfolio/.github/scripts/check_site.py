@@ -138,6 +138,44 @@ for page in page_paths:
     checks[f"no legacy GitHub Pages staging URL: {relative}"] = "laxmi-narayan-87.github.io/CL-PORT/staging-portfolio/" not in page_html
     checks[f"shared base stylesheet linked: {relative}"] = "assets/base.css" in page_html
 
+# Verify local navigation and new-tab safety across every staged HTML page.
+from html.parser import HTMLParser
+
+class StagingLinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.ids = set()
+        self.fragments = []
+        self.unsafe_new_tab_links = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        element_id = attrs.get("id")
+        if element_id:
+            self.ids.add(element_id)
+        href = attrs.get("href", "")
+        if tag == "a" and href.startswith("#") and len(href) > 1:
+            self.fragments.append(href[1:])
+        if tag == "a" and attrs.get("target", "").lower() == "_blank":
+            rel = set(attrs.get("rel", "").lower().split())
+            if not {"noopener", "noreferrer"}.issubset(rel):
+                self.unsafe_new_tab_links.append(href or "(missing href)")
+
+for page in page_paths:
+    path = ROOT / page
+    if not path.is_file():
+        continue
+    page_html = path.read_text(encoding="utf-8")
+    parser = StagingLinkParser()
+    parser.feed(page_html)
+    missing_fragments = sorted(set(parser.fragments) - parser.ids)
+    checks[f"all in-page links resolve: {page}"] = not missing_fragments
+    checks[f"new-tab links are protected: {page}"] = not parser.unsafe_new_tab_links
+    if missing_fragments:
+        print(f"Broken fragments in {page}: {', '.join(missing_fragments)}")
+    if parser.unsafe_new_tab_links:
+        print(f"Unsafe new-tab links in {page}: {', '.join(parser.unsafe_new_tab_links)}")
+
 try:
     config = json.loads(VERCEL_CONFIG.read_text(encoding="utf-8"))
     header_rules = config.get("headers", [])
