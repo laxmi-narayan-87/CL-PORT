@@ -22,3 +22,20 @@ The staging portfolio has a dedicated `/certifications/` page backed by `data/ce
 ## Verification
 
 Run `python staging-portfolio/.github/scripts/check_site.py` from the repository root. The staging quality checker fails if any HTML page loses `noindex, follow`, acquires a canonical, points its social URL at the wrong host, or if the Vercel response-header policy drifts.
+
+## Project claim register
+
+`data/project-claims.json` is the canonical register for each featured project's technology tags, status, implementation claims, experiments, planned work, measured-results state, limitations, and evidence state. The homepage and case-study pages are narrative views; their technology tags must exactly match the register. The staging quality checker validates this consistency and verifies architecture diagrams where the implementation is sufficiently understood.
+
+Keep the categories separate when updating a case study:
+- **Implemented:** backed by the accessible repository or recorded project evidence.
+- **Experiment:** an approach under evaluation, without implying a successful result.
+- **Planned:** proposed work that has not shipped.
+- **Measured result:** publish the configuration, evaluation method, and outcome together; do not substitute pipeline volume for model quality.
+- **Limitations:** state constraints and known gaps rather than hiding them in future-work copy.
+
+DarkSense AI's detailed architecture and case study remain provisional until its application implementation can be shared. The current public folder is an interface/flowchart preview, not the application's source of truth.
+
+## Role-specific resumes
+
+The `/resume/` route asks visitors to choose a role and opens a matching, print-ready resume for software development, QA/testing, or applied AI/ML and data. The profile variants reuse the same project facts and are formatted for the browser's Print → Save as PDF workflow.

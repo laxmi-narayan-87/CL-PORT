@@ -10,6 +10,7 @@ SITEMAP = ROOT / "sitemap.xml"
 GOOGLE_VERIFICATION = ROOT / "google962efd04cf37010b.html"
 VERCEL_CONFIG = ROOT / "vercel.json"
 CERTIFICATION_DATA = ROOT / "data" / "certifications.json"
+PROJECT_DATA = ROOT / "data" / "project-claims.json"
 CERTIFICATION_SCRIPT = ROOT / "assets" / "certifications.js"
 BASE_CSS = ROOT / "assets" / "base.css"
 HOME_CSS = ROOT / "assets" / "home.css"
@@ -21,6 +22,10 @@ required_pages = [
     "projects/q-learning-frozenlake/index.html",
     "projects/qa-automation/index.html",
     "certifications/index.html",
+    "resume/index.html",
+    "resume/software-development/index.html",
+    "resume/qa-testing/index.html",
+    "resume/ai-ml-data/index.html",
 ]
 
 if not HOME.is_file():
@@ -68,7 +73,7 @@ checks = {
     "education timeline still has three entries": html.count('class="education-item"') == 3,
     "quality/security section": 'id="quality"' in html,
     "contact email link": 'href="mailto:laxminarayan955459@gmail.com"' in html,
-    "DarkSense links to its actual source": 'href="https://github.com/laxmi-narayan-87/CL-PORT/tree/main/darksense"' in html,
+    "DarkSense link is labelled as a public interface preview": "View public interface preview" in html,
     "LeetCode generic homepage link removed": 'href="https://leetcode.com/"' not in html,
     "staging sitemap removed": not SITEMAP.exists(),
     "copied Search Console verification removed": not GOOGLE_VERIFICATION.exists(),
@@ -85,8 +90,41 @@ for phrase in placeholder_phrases:
     checks[f"no editorial placeholder: {phrase}"] = phrase.lower() not in html.lower()
 
 for page in required_pages:
-    checks[f"case study exists: {page}"] = (ROOT / page).is_file()
+    checks[f"required page exists: {page}"] = (ROOT / page).is_file()
 
+
+# Keep project-card and case-study technology tags aligned with the project claim register.
+try:
+    project_claims = json.loads(PROJECT_DATA.read_text(encoding="utf-8"))
+    project_records = project_claims.get("projects", []) if isinstance(project_claims, dict) else []
+    checks["project claim registry has five projects"] = isinstance(project_claims, dict) and isinstance(project_records, list) and len(project_records) == 5
+    checks["project claim registry explains its purpose"] = isinstance(project_claims, dict) and bool(project_claims.get("purpose"))
+    home_cards = re.findall(r'<article class="project">([\\s\\S]*?)</article>', html)
+    for record in project_records:
+        name = record.get("name", "unknown project")
+        expected_tags = record.get("technologies", [])
+        title = record.get("homepage_title", name)
+        card_html = next((card for card in home_cards if f"<h3>{title}</h3>" in card), "")
+        card_tags = re.findall(r'<span class="tag">([^<]+)</span>', card_html)
+        checks[f"homepage project card exists: {name}"] = bool(card_html)
+        checks[f"homepage tags match claim register: {name}"] = card_tags == expected_tags
+        case_path = ROOT / record.get("case_study_path", "")
+        case_html = case_path.read_text(encoding="utf-8") if case_path.is_file() else ""
+        tag_block = re.search(r'<div class="tags">(.*?)</div>', case_html, re.S)
+        case_tags = re.findall(r'<span class="tag">([^<]+)</span>', tag_block.group(1)) if tag_block else []
+        checks[f"case-study exists and tags match registry: {name}"] = bool(case_html) and case_tags == expected_tags
+        list_fields = ("implemented_features", "experiments", "planned_features", "measured_results", "limitations")
+        checks[f"claim categories and evidence state exist: {name}"] = all(
+            isinstance(record.get(field), list) for field in list_fields
+        ) and bool(record.get("status")) and bool(record.get("evidence_status"))
+        diagram = record.get("architecture_diagram")
+        if diagram:
+            checks[f"architecture diagram exists and is linked: {name}"] = (ROOT / diagram).is_file() and f'src="../../{diagram}"' in case_html
+        else:
+            checks[f"deferred architecture is explicitly disclosed: {name}"] = 'id="architecture-pending"' in case_html and "intentionally deferred" in case_html
+except (OSError, json.JSONDecodeError, TypeError, AttributeError) as exc:
+    checks["project claim registry is valid"] = False
+    print(f"Could not parse project claim registry: {exc}")
 
 # Validate the client-side certification explorer's data and CSP boundary.
 CERT_PAGE = ROOT / "certifications" / "index.html"
@@ -120,6 +158,17 @@ checks["certification list loads local JSON"] = 'fetch(DATA_URL' in CERT_JS and 
 checks["certification list shows personal and course links separately"] = "Verify credential" in CERT_JS and "View course page" in CERT_JS
 checks["certification page excludes job-description matcher"] = 'id="jd-text"' not in CERT_PAGE_HTML and 'id="match-jd"' not in CERT_PAGE_HTML and "Which learning is relevant to this JD?" not in CERT_PAGE_HTML
 checks["homepage links to certification explorer"] = 'href="/certifications/"' in html
+checks["homepage links to role-based resume selector"] = 'href="/resume/"' in html
+resume_selector = (ROOT / "resume" / "index.html").read_text(encoding="utf-8") if (ROOT / "resume" / "index.html").is_file() else ""
+checks["resume selector offers all three tailored routes"] = all(
+    route in resume_selector for route in ("/resume/software-development/", "/resume/qa-testing/", "/resume/ai-ml-data/")
+)
+for resume_page in ("resume/software-development/index.html", "resume/qa-testing/index.html", "resume/ai-ml-data/index.html"):
+    resume_html_path = ROOT / resume_page
+    resume_html = resume_html_path.read_text(encoding="utf-8") if resume_html_path.is_file() else ""
+    checks[f"resume page supports print-to-PDF: {resume_page}"] = (
+        "Print" in resume_html and "Save as PDF" in resume_html and "resume-paper" in resume_html
+    )
 
 # Every staged HTML page must remain excluded from search results and use the staging host only.
 page_paths = ["index.html", *required_pages]

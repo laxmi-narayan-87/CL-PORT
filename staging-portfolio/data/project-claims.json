@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "purpose": "Canonical register for project status, homepage/case-study technology tags, implementation claims, experiments, planned work, measured results, limitations, and evidence state. Keep homepage and case-study tags synchronized with this file.",
+  "projects": [
+    {
+      "id": "darksense-ai",
+      "name": "DarkSense AI",
+      "homepage_title": "DarkSense AI",
+      "case_study_path": "projects/darksense-ai/index.html",
+      "technologies": [
+        "Python",
+        "Selenium",
+        "BERT / text classification",
+        "Visual analysis",
+        "Heuristics"
+      ],
+      "status": "in-progress",
+      "implemented_features": [
+        "Selenium-based browser automation is used for web-interface collection.",
+        "Python workflows cover collection, preprocessing, validation, and data ingestion."
+      ],
+      "experiments": [
+        "BERT-based text classification alongside visual signals and heuristic rules."
+      ],
+      "planned_features": [
+        "Publish the full implementation when source can be shared.",
+        "Confirm architecture boundaries, setup instructions, tests, screenshots/demo, and reproducible evaluation after reviewing the implementation."
+      ],
+      "measured_results": [
+        "Model-quality metrics are not published; no accuracy, precision, or recall claim is made."
+      ],
+      "limitations": [
+        "The full application implementation is not available in the linked public preview folder.",
+        "Architecture and contribution details remain deferred until source can be reviewed."
+      ],
+      "evidence_status": "The public folder is an interface/flowchart preview, not the full implementation.",
+      "architecture_diagram": null
+    },
+    {
+      "id": "skillforge-academy",
+      "name": "SkillForge Academy",
+      "homepage_title": "SkillForge Academy",
+      "case_study_path": "projects/skillforge-academy/index.html",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Gemini API",
+        "Zod",
+        "React Flow"
+      ],
+      "status": "project",
+      "implemented_features": [
+        "AI-assisted roadmap generation with Gemini.",
+        "Structural roadmap validation with Zod.",
+        "Interactive learning paths with React Flow.",
+        "Supabase authentication and user-scoped progress persistence as documented by the repository."
+      ],
+      "experiments": [
+        "Evaluating usefulness and quality of AI-generated learning roadmaps; numeric learner outcomes are not published."
+      ],
+      "planned_features": [
+        "A graceful fallback view for recoverable API/backend failures.",
+        "Publish dated test-run output, screenshots/demo, and measured outcomes."
+      ],
+      "measured_results": [
+        "No learner-outcome or availability metrics are published on the case-study page."
+      ],
+      "limitations": [
+        "Repository documentation identifies a Row Level Security migration and deployment prerequisites.",
+        "Fallback behaviour is proposed and is not claimed as implemented."
+      ],
+      "evidence_status": "Repository documents the stack and lint/build commands; latest test output and outcome metrics are not published in this case study.",
+      "architecture_diagram": "assets/architecture/skillforge-academy.svg"
+    },
+    {
+      "id": "agrovalue",
+      "name": "AgroValue",
+      "homepage_title": "AgroValue",
+      "case_study_path": "projects/agrovalue/index.html",
+      "technologies": [
+        "Python",
+        "Time series",
+        "AGMARKNET / OGD",
+        "SARIMAX",
+        "Streamlit"
+      ],
+      "status": "project",
+      "implemented_features": [
+        "AGMARKNET/OGD mandi-data workflow, validation, and time-series feature engineering.",
+        "Seasonal Naive and SARIMAX baseline comparison.",
+        "Chronological holdout evaluation using MAE, RMSE, and sMAPE."
+      ],
+      "experiments": [
+        "Comparing forecasting baselines on chronological holdout data."
+      ],
+      "planned_features": [
+        "Publish the exact holdout window, dataset filters, baseline-vs-model result table, and screenshots/dashboard recording."
+      ],
+      "measured_results": [
+        "Evaluation metrics are defined; numerical scores and forecast-impact claims are not published here."
+      ],
+      "limitations": [
+        "Forecast performance depends on commodity/market selection, date range, source-data gaps, and regime changes."
+      ],
+      "evidence_status": "Workflow and evaluation approach are described; a reproducible numerical result table remains to be added.",
+      "architecture_diagram": "assets/architecture/agrovalue.svg"
+    },
+    {
+      "id": "q-learning-frozenlake",
+      "name": "Q-Learning on FrozenLake",
+      "homepage_title": "Q-Learning on FrozenLake",
+      "case_study_path": "projects/q-learning-frozenlake/index.html",
+      "technologies": [
+        "Python",
+        "Q-learning",
+        "Epsilon-greedy",
+        "Temporal difference"
+      ],
+      "status": "live-project",
+      "implemented_features": [
+        "Tabular Q-table updates.",
+        "Epsilon-greedy action selection and epsilon decay.",
+        "Temporal-difference target calculation, greedy policy extraction, and episode success-rate evaluation."
+      ],
+      "experiments": [
+        "Learning behaviour under the selected environment and training settings."
+      ],
+      "planned_features": [
+        "Publish configuration, seed policy, training episode count, evaluation episode count, and observed success rates."
+      ],
+      "measured_results": [
+        "No particular success-rate score is published without a reproducible run record."
+      ],
+      "limitations": [
+        "Results vary with environment settings, stochasticity, hyperparameters, and evaluation episodes."
+      ],
+      "evidence_status": "Implementation workflow described; numerical run evidence has not yet been published in the case study.",
+      "architecture_diagram": "assets/architecture/q-learning.svg"
+    },
+    {
+      "id": "qa-testing",
+      "name": "QA testing and test design",
+      "homepage_title": "QA testing and test design",
+      "case_study_path": "projects/qa-automation/index.html",
+      "technologies": [
+        "Manual testing",
+        "Test design",
+        "Regression",
+        "Traceability"
+      ],
+      "status": "in-progress",
+      "implemented_features": [
+        "Feature-based manual test design and user-journey scenarios.",
+        "Boundary/invalid/empty-state planning and responsive/cross-browser matrix.",
+        "Candidate defect reports kept separate from confirmed defects."
+      ],
+      "experiments": [
+        "Optional Playwright automation planning; do not describe it as implemented test coverage without repository evidence."
+      ],
+      "planned_features": [
+        "Add real execution evidence, screenshots/recordings, environment details, and confirmed-defect records after testing."
+      ],
+      "measured_results": [
+        "Pass/fail totals and defect counts are not published because execution evidence is not yet recorded."
+      ],
+      "limitations": [
+        "The repository scope excludes security, penetration, and load testing.",
+        "Selenium browser automation is documented under DarkSense AI, not this manual QA test-design project."
+      ],
+      "evidence_status": "Manual test-planning focus; evidence folders remain placeholders until genuine artifacts are added.",
+      "architecture_diagram": "assets/architecture/qa-testing.svg"
+    }
+  ]
+}
