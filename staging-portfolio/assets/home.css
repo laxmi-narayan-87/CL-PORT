@@ -588,10 +588,18 @@ footer {
   font-size: .92rem;
 }
 .profile-card a {
-  margin-top: auto;
   font-size: .88rem;
-  font-weight: 650;
   overflow-wrap: anywhere;
+}
+.profile-card .profile-link {
+  margin-top: auto;
+  font-weight: 650;
+}
+.profile-card .archive-link {
+  margin-top: .65rem;
+  color: var(--muted);
+  font-size: .82rem;
+  font-weight: 500;
 }
 @media (max-width: 760px) {
   .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
