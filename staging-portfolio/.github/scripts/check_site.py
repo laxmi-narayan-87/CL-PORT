@@ -99,7 +99,7 @@ try:
     project_records = project_claims.get("projects", []) if isinstance(project_claims, dict) else []
     checks["project claim registry has five projects"] = isinstance(project_claims, dict) and isinstance(project_records, list) and len(project_records) == 5
     checks["project claim registry explains its purpose"] = isinstance(project_claims, dict) and bool(project_claims.get("purpose"))
-    home_cards = re.findall(r'<article class="project">([\\s\\S]*?)</article>', html)
+    home_cards = re.findall(r'<article class="project">([\s\S]*?)</article>', html)
     for record in project_records:
         name = record.get("name", "unknown project")
         expected_tags = record.get("technologies", [])
