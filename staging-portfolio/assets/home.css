@@ -554,3 +554,48 @@ footer {
     flex-direction:column
   }
 }
+
+/* Developer profiles and public practice archives */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 1.35rem;
+  border: 1px solid var(--line);
+  background: rgba(234, 231, 217, .2);
+}
+.profile-kind {
+  margin: 0 0 .7rem;
+  color: var(--olive);
+  font: .7rem var(--mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.profile-card h3 {
+  margin: 0 0 .55rem;
+  font: 400 1.7rem/1.15 var(--serif);
+  letter-spacing: -.03em;
+}
+.profile-card p:not(.profile-kind) {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.profile-card a {
+  margin-top: auto;
+  font-size: .88rem;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .profile-grid { grid-template-columns: 1fr; }
+}
