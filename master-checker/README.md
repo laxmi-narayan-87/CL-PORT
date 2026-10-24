@@ -15,6 +15,7 @@ Capture for every workstream:
 
 ## Contents
 
+- [Visual task dashboard](dashboard.html) — search and filter the task ledger, review status counts, and view the suggested weekend plate.
 - [Task ledger (CSV)](tasks.csv) — filterable rows with dates, rationale, steps, status, next action and references.
 - [Timeline and workstream notes](timeline.md) — readable dated summary, decisions and key project context.
 - [Roadmap](roadmap.md) — priorities and criteria for marking tasks complete.
