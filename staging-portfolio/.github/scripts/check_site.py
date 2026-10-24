@@ -166,9 +166,11 @@ checks["resume selector offers all three tailored routes"] = all(
 for resume_page in ("resume/software-development/index.html", "resume/qa-testing/index.html", "resume/ai-ml-data/index.html"):
     resume_html_path = ROOT / resume_page
     resume_html = resume_html_path.read_text(encoding="utf-8") if resume_html_path.is_file() else ""
-    checks[f"resume page supports print-to-PDF: {resume_page}"] = (
+    checks[f"resume page supports A4 print-to-PDF: {resume_page}"] = (
         "Print" in resume_html and "Save as PDF" in resume_html and "resume-paper" in resume_html
     )
+    checks[f"resume achievement count is factual: {resume_page}"] = "300+ DSA problems solved on LeetCode" in resume_html and "700+" not in resume_html
+    checks[f"resume distinguishes course records from certifications: {resume_page}"] = "Certifications &amp; Selected Learning" in resume_html and "<strong>Course records:</strong>" in resume_html
 
 # Every staged HTML page must remain excluded from search results and use the staging host only.
 page_paths = ["index.html", *required_pages]
