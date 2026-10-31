@@ -138,3 +138,14 @@ select:focus-visible {
   background: #24534c !important;
   color: #ffffff !important;
 }
+
+
+/* Make the selected certification filter text unmistakably readable */
+.filter-panel select#focus,
+.filter-panel select#focus:focus,
+.filter-panel select#focus:active,
+.filter-panel select#focus:valid {
+  color: #7cf7d4 !important;
+  -webkit-text-fill-color: #7cf7d4 !important;
+  background-color: #0b1220 !important;
+}
