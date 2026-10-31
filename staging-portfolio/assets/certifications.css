@@ -200,3 +200,31 @@ select:focus-visible {
 .filter-panel select#focus:focus-visible {
   outline-color: #7cf7d4 !important;
 }
+
+
+/* User-requested mint-grey background for the entire certification filter panel */
+.certification-filters,
+.filter-panel,
+#certification-filters,
+.filters {
+  background-color: #c7d8d2 !important;
+  color: #17231f !important;
+}
+.certification-filters label,
+.filter-panel label,
+#certification-filters label,
+.filters label {
+  color: #17231f !important;
+}
+.certification-filters input,
+.certification-filters select,
+.filter-panel input,
+.filter-panel select,
+#certification-filters input,
+#certification-filters select,
+.filters input,
+.filters select {
+  background-color: #c7d8d2 !important;
+  color: #17231f !important;
+  -webkit-text-fill-color: #17231f !important;
+}
