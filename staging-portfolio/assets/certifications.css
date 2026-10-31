@@ -149,3 +149,15 @@ select:focus-visible {
   -webkit-text-fill-color: #7cf7d4 !important;
   background-color: #0b1220 !important;
 }
+
+
+/* Mint-grey selected state for certification filter */
+.filter-panel select#focus,
+.filter-panel select#focus:focus,
+.filter-panel select#focus:active,
+.filter-panel select#focus:valid {
+  background-color: #c9d8d2 !important;
+  color: #17232b !important;
+  -webkit-text-fill-color: #17232b !important;
+  border-color: #7cf7d4 !important;
+}
