@@ -26,5 +26,5 @@ jobs:
         run: python .github/scripts/check_site.py
       - name: Validate staging SEO and response-header safeguards
         run: python staging-portfolio/.github/scripts/check_site.py
-      - name: Check certification matcher JavaScript syntax
+      - name: Check certification explorer JavaScript syntax
         run: node --check staging-portfolio/assets/certifications.js
