@@ -351,3 +351,100 @@ footer,
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Responsive navigation correction after mobile preview */
+@media (min-width: 761px) {
+  :root { --nav-rail-width: 14rem; }
+  .topbar {
+    left: 1.25rem;
+    top: 1.25rem;
+    bottom: auto;
+    width: var(--nav-rail-width);
+    max-height: calc(100vh - 2.5rem);
+  }
+  main {
+    margin-left: calc(var(--nav-rail-width) + 3.5rem);
+    margin-right: 1.5rem;
+  }
+  .hero {
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 760px) {
+  /* On phones, convert the sidebar into a horizontal floating toolbar.
+     This keeps it from covering the name or shrinking nav labels to unreadable sizes. */
+  .topbar {
+    position: fixed;
+    inset: .6rem .6rem auto .6rem;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    overflow: visible;
+    border-radius: 1rem;
+    background: rgba(16,24,39,.97);
+  }
+  .topbar .nav {
+    width: 100%;
+    min-height: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    padding: .65rem .85rem;
+  }
+  .topbar .wordmark {
+    flex: 0 0 auto;
+    font-size: 1rem;
+  }
+  .topbar .navlinks {
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .9rem;
+    width: auto;
+    min-width: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: .76rem;
+    padding: .1rem 0;
+    scrollbar-width: none;
+  }
+  .topbar .navlinks::-webkit-scrollbar { display: none; }
+  main {
+    margin: 0;
+    padding: 0 !important;
+  }
+  .hero {
+    padding-top: 7.5rem !important;
+    gap: 2rem;
+  }
+  .hero-main {
+    min-width: 0;
+  }
+  .hero h1 {
+    font-size: clamp(2.8rem, 12vw, 4.8rem);
+    line-height: .94;
+    overflow-wrap: normal;
+  }
+  .hero .actions {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 380px) {
+  .topbar .nav {
+    gap: .55rem;
+    padding: .6rem .7rem;
+  }
+  .topbar .wordmark {
+    font-size: .9rem;
+  }
+  .topbar .navlinks {
+    gap: .7rem;
+    font-size: .7rem;
+  }
+  .hero {
+    padding-top: 7rem !important;
+  }
+}
