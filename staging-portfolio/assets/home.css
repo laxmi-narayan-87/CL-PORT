@@ -358,3 +358,18 @@ main {
     padding: .7rem .85rem;
   }
 }
+
+
+/* Floating navigation panel anchored on the left */
+.topbar {
+  left: 1rem;
+  right: auto;
+  transform: none;
+}
+@media (max-width: 720px) {
+  .topbar {
+    left: .6rem;
+    right: auto;
+    transform: none;
+  }
+}
