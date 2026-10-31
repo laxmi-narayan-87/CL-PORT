@@ -294,3 +294,29 @@ footer { background:rgba(16,24,39,.55); border-top:1px solid rgba(225,235,255,.1
     gap: .65rem;
   }
 }
+
+
+/* Navigation links arranged as a vertical menu */
+.nav {
+  align-items: flex-start;
+}
+.navlinks {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3rem;
+  line-height: 1.25;
+}
+.navlinks a {
+  padding: .15rem 0;
+}
+@media (max-width: 720px) {
+  .nav {
+    align-items: flex-start;
+  }
+  .navlinks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .35rem;
+    padding: .5rem 0 .75rem;
+  }
+}
