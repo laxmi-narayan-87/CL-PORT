@@ -161,3 +161,16 @@ select:focus-visible {
   -webkit-text-fill-color: #17232b !important;
   border-color: #7cf7d4 !important;
 }
+
+
+/* Muted mint-grey surface for the selected certification filter */
+.filter-panel select#focus,
+.filter-panel select#focus:focus,
+.filter-panel select#focus:active,
+.filter-panel select#focus:valid {
+  background-color: #C7D8D2 !important;
+  background: #C7D8D2 !important;
+  color: #17231F !important;
+  -webkit-text-fill-color: #17231F !important;
+  border-color: #8CA69C !important;
+}
