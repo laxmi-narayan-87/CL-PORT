@@ -267,3 +267,87 @@ footer { background:rgba(16,24,39,.55); border-top:1px solid rgba(225,235,255,.1
   .hero::before,.orbit-one,.orbit-two { animation:none; }
   .project,.button,.navlinks a::after { transition:none; }
 }
+
+
+/* Staging design cleanup: stable floating sidebar, no hero collision */
+:root {
+  --nav-rail-width: 13.25rem;
+}
+.topbar {
+  position: fixed;
+  inset: 1rem auto 1rem 1rem;
+  width: var(--nav-rail-width);
+  max-height: calc(100dvh - 2rem);
+  height: fit-content;
+  overflow-y: auto;
+  transform: none;
+  z-index: 1000;
+  background: rgba(16, 24, 39, .96);
+  border: 1px solid rgba(124, 247, 212, .18);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.24);
+  backdrop-filter: blur(14px);
+}
+.topbar .wrap,
+.topbar .nav {
+  width: 100%;
+}
+.topbar .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: 1rem;
+}
+.topbar .navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .28rem;
+  width: 100%;
+  font-size: .82rem;
+}
+.topbar .navlinks a {
+  display: block;
+  padding: .25rem 0;
+}
+main {
+  padding-top: 0 !important;
+  margin-left: calc(var(--nav-rail-width) + 2.5rem);
+}
+section,
+footer,
+[id] {
+  scroll-margin-top: 1.5rem;
+}
+@media (max-width: 760px) {
+  .topbar {
+    inset: .65rem auto auto .65rem;
+    width: min(11rem, calc(100vw - 1.3rem));
+    max-height: min(68dvh, 34rem);
+    border-radius: .8rem;
+  }
+  .topbar .nav {
+    padding: .75rem;
+    gap: .55rem;
+  }
+  .topbar .navlinks {
+    font-size: .76rem;
+  }
+  main {
+    margin-left: 0;
+    padding-top: 0 !important;
+  }
+  /* On narrow screens the rail overlays; reserve a small clear zone for hero copy. */
+  .hero {
+    padding-top: clamp(10rem, 38dvh, 16rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .topbar,
+  .topbar * {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
