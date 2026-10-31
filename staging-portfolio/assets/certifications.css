@@ -228,3 +228,26 @@ select:focus-visible {
   color: #17231f !important;
   -webkit-text-fill-color: #17231f !important;
 }
+
+
+/* Final explicit mint background for both certification filter controls */
+.filter-panel #search,
+.filter-panel #focus {
+  background: #7CF7D4 !important;
+  background-color: #7CF7D4 !important;
+  color: #10231F !important;
+  -webkit-text-fill-color: #10231F !important;
+  border: 1px solid #4A9F91 !important;
+}
+.filter-panel #search::placeholder {
+  color: #365F58 !important;
+  opacity: 1 !important;
+}
+.filter-panel #focus option {
+  background: #D9F7EF !important;
+  color: #10231F !important;
+}
+.filter-panel #focus option:checked {
+  background: #7CF7D4 !important;
+  color: #10231F !important;
+}
