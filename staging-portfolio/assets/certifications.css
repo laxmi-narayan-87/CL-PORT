@@ -174,3 +174,29 @@ select:focus-visible {
   -webkit-text-fill-color: #17231F !important;
   border-color: #8CA69C !important;
 }
+
+
+/* Mint-grey filter textbox surfaces */
+.filter-panel input[type="search"],
+.filter-panel select#focus {
+  background-color: #cbd5d1 !important;
+  color: #17212b !important;
+  -webkit-text-fill-color: #17212b !important;
+  border-color: #aabbb4 !important;
+}
+.filter-panel input[type="search"]::placeholder {
+  color: #46564f !important;
+  opacity: 1 !important;
+}
+.filter-panel select#focus option {
+  background-color: #d6dfda !important;
+  color: #17212b !important;
+}
+.filter-panel select#focus option:checked {
+  background-color: #7cf7d4 !important;
+  color: #17212b !important;
+}
+.filter-panel input[type="search"]:focus-visible,
+.filter-panel select#focus:focus-visible {
+  outline-color: #7cf7d4 !important;
+}
