@@ -113,3 +113,28 @@ select:focus-visible {
   -webkit-text-fill-color: #ffffff !important;
   opacity: 1 !important;
 }
+
+
+/* Selected value: use a dark native control surface, never white */
+.filter-panel select#focus,
+.filter-panel select#focus:focus,
+.filter-panel select#focus:active,
+.filter-panel select#focus:valid {
+  background: #0b1220 !important;
+  background-color: #0b1220 !important;
+  color: #f7f9ff !important;
+  -webkit-text-fill-color: #f7f9ff !important;
+  caret-color: #7cf7d4 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  text-shadow: none !important;
+  border-color: #9aa9c2 !important;
+}
+.filter-panel select#focus option {
+  background: #182337 !important;
+  color: #f7f9ff !important;
+}
+.filter-panel select#focus option:checked {
+  background: #24534c !important;
+  color: #ffffff !important;
+}
