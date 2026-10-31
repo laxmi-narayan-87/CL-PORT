@@ -20,3 +20,40 @@ input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(-
 .missing-link{color:var(--muted);font-size:.78rem}.load-error{margin:1rem 0;padding:1rem;border:1px solid var(--clay);color:var(--ink)}
 .page-footer{padding:2rem 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:3rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 @media(max-width:700px){.nav{align-items:flex-start}.filter-panel,.credential-grid{grid-template-columns:1fr}.credential-card{padding:1rem}.credential-top{align-items:flex-start}.page-footer{flex-direction:column}}
+
+
+/* Accessible contrast for certification filters on the midnight theme */
+.filter-panel {
+  background: #182337;
+  border-color: rgba(225, 235, 255, .28);
+}
+.filter-panel .field label {
+  color: #f7f9ff;
+}
+input[type="search"],
+select {
+  background: #0b1220;
+  color: #f7f9ff;
+  border: 1px solid #7c8ba5;
+  border-radius: .55rem;
+  color-scheme: dark;
+}
+input[type="search"]::placeholder {
+  color: #aebbd0;
+  opacity: 1;
+}
+select option {
+  background: #0b1220;
+  color: #f7f9ff;
+}
+input[type="search"]:hover,
+select:hover {
+  border-color: #c0cce0;
+}
+input[type="search"]:focus-visible,
+select:focus-visible {
+  outline: 3px solid #7cf7d4;
+  outline-offset: 3px;
+  border-color: #7cf7d4;
+  box-shadow: 0 0 0 4px rgba(124, 247, 212, .14);
+}
