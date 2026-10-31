@@ -373,3 +373,60 @@ main {
     transform: none;
   }
 }
+
+
+/* Repair floating menu sizing and prevent it from covering the hero */
+.topbar {
+  width: min(15.5rem, calc(100vw - 2rem));
+  max-height: min(78vh, 42rem);
+  overflow: auto;
+  background: rgba(12, 19, 32, .97);
+  border-color: rgba(124,247,212,.28);
+  scrollbar-width: thin;
+}
+.topbar .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .85rem;
+}
+.topbar .navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .4rem;
+  width: 100%;
+  font-size: .82rem;
+}
+.topbar .wordmark {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+main {
+  padding-top: 16rem;
+}
+@media (min-width: 721px) {
+  .topbar {
+    width: 15.5rem;
+    max-height: calc(100vh - 2rem);
+  }
+  main {
+    padding-top: 14rem;
+  }
+}
+@media (max-width: 720px) {
+  .topbar {
+    width: min(14rem, calc(100vw - 1.2rem));
+    max-height: 62vh;
+  }
+  main {
+    padding-top: 13rem;
+  }
+  .topbar .nav {
+    padding: .8rem;
+  }
+  .topbar .navlinks {
+    font-size: .78rem;
+  }
+}
