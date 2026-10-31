@@ -57,3 +57,31 @@ select:focus-visible {
   border-color: #7cf7d4;
   box-shadow: 0 0 0 4px rgba(124, 247, 212, .14);
 }
+
+
+/* Fix native select rendering/selected-option contrast on mobile browsers */
+.filter-panel select#focus {
+  background-color: #0b1220 !important;
+  color: #f7f9ff !important;
+  -webkit-text-fill-color: #f7f9ff !important;
+  border: 1px solid #9aa9c2 !important;
+  opacity: 1 !important;
+  appearance: auto;
+  -webkit-appearance: menulist;
+}
+.filter-panel select#focus:valid,
+.filter-panel select#focus:focus,
+.filter-panel select#focus:active {
+  background-color: #0b1220 !important;
+  color: #f7f9ff !important;
+  -webkit-text-fill-color: #f7f9ff !important;
+}
+.filter-panel select#focus option,
+.filter-panel select#focus optgroup {
+  background-color: #0b1220 !important;
+  color: #f7f9ff !important;
+}
+.filter-panel select#focus option:checked {
+  background-color: #24413f !important;
+  color: #ffffff !important;
+}
