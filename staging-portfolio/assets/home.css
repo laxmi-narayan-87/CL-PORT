@@ -267,3 +267,30 @@ footer { background:rgba(16,24,39,.55); border-top:1px solid rgba(225,235,255,.1
   .hero::before,.orbit-one,.orbit-two { animation:none; }
   .project,.button,.navlinks a::after { transition:none; }
 }
+
+
+/* CTA hierarchy: keep actions readable and intentionally stacked */
+.hero .actions,
+#contact .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .7rem;
+  margin-top: 1.6rem;
+}
+.hero .actions .button,
+#contact .actions .button {
+  width: fit-content;
+  max-width: 100%;
+  justify-content: flex-start;
+}
+.hero .actions .button.primary,
+#contact .actions .button.primary {
+  margin-bottom: .35rem;
+}
+@media (max-width: 720px) {
+  .hero .actions,
+  #contact .actions {
+    gap: .65rem;
+  }
+}
