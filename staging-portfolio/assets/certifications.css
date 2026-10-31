@@ -251,3 +251,26 @@ select:focus-visible {
   background: #7CF7D4 !important;
   color: #10231F !important;
 }
+
+
+/* User-requested dark grey background for certification filter fields */
+.filter-panel #search,
+.filter-panel #focus {
+  background: #343A40 !important;
+  background-color: #343A40 !important;
+  color: #F7F9FF !important;
+  -webkit-text-fill-color: #F7F9FF !important;
+  border: 1px solid #69737D !important;
+}
+.filter-panel #search::placeholder {
+  color: #D0D5DB !important;
+  opacity: 1 !important;
+}
+.filter-panel #focus option {
+  background: #343A40 !important;
+  color: #F7F9FF !important;
+}
+.filter-panel #focus option:checked {
+  background: #4B5563 !important;
+  color: #FFFFFF !important;
+}
